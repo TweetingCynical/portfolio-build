@@ -16,7 +16,19 @@ Build a professional portfolion page for showcasing work on web development proj
 
 ### Overview of Build
 
-index.html:
+This page has been built to showcase some of the following skills in use in the HTML and CSS:
+- Reset.css linked to account for different browser defaults;
+- @import to use fonts stored with google apis;
+- :root to store colours and font for sitewide use;
+- Setting font size 1rem = 10px;
+- Setting border radius to create a circular image;
+- Setting the cursor: pointer for a tags;
+- Flex box for nav bar layout inside header;
+- Linear gradients used on header and work display images using stored colours;
+- Grid layout to structure main content on page;
+- Styling of different classes within the grid to allow for easier addition of future grid rows;
+- Overlaying of headlines onto images;
+- Hover options to ann outline border and remove linear gradients to draw focus to images;
 
 
 ## Suggested future changes

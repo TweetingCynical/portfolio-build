@@ -74,6 +74,7 @@ p {
 }
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 /* Header bar with logo, title and nav options */
@@ -120,6 +121,12 @@ a {
     display: flex;
     justify-content: flex-end;
     margin: 0 5px;
+}
+
+.logo img:hover{
+    outline: 6px solid var(--secondaryColor);
+    outline-offset: -5px;
+    transition: all 0.5s ease-in-out;
 }
 
 header .logo img {
@@ -194,6 +201,7 @@ header .logo img {
     ), 
     url("../images/02-portfolio-5.jpg"); /* Add bottom layer of hero image */
 }
+
 #workDisplayB {
     grid-area: workDisplayB;
     background: linear-gradient( /* Create top layer of semi transparent gradient */
@@ -208,7 +216,7 @@ header .logo img {
         rgba(79, 62, 89, 0.45), 
         var(--mainColor)
     ), 
-    url("../images/02-portfolio-4.jpg"); /* Add bottom layer of hero image */
+    url("../images/02-portfolio-6.jpg"); /* Add bottom layer of hero image */
 }
 #workDisplayD {
     grid-area: workDisplayD;
@@ -255,10 +263,42 @@ header .logo img {
     padding: 0 0 20px 0;
 }
 
+.gridWorkDisplay:hover {
+    box-shadow: inset 0px 0px 20px var(--secondaryColor), 0 0 20px var(--secondaryColor);
+}
+
 .workHeadline {
     background: var(--secondaryColor);
     color: var(--white);
     min-width: 240px;
     width: 40%;
     padding: 10px;
+}
+
+/* Styling for when user hovers over a work display image */
+#workDisplayA:hover {
+    background: url("../images/02-portfolio-5.jpg");
+
+}
+
+#workDisplayB:hover {
+    background: url("../images/02-portfolio-1.jpg");
+
+}
+
+#workDisplayC:hover {
+    background: url("../images/02-portfolio-6.jpg");
+
+}
+
+#workDisplayD:hover {
+    background: url("../images/02-portfolio-3.jpg");
+
+}
+
+#workDisplayA:hover, #workDisplayB:hover, #workDisplayC:hover, #workDisplayD:hover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
 }
