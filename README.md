@@ -31,6 +31,7 @@ This page has been built to showcase some of the following skills in use in the 
 - Overlaying of headlines onto images;
 - Hover options to ann outline border and remove linear gradients to draw focus to images;
 - Contact icons with links to different socials;
+- Media queries to adjust for sizes of viewport.
 
 
 ## Suggested future changes
@@ -41,8 +42,11 @@ This page has been built to showcase some of the following skills in use in the 
 
 ## Screenshot
 
-Working version of site should look like this:
-![Site Screenshot](./assets/images/screenshot.jpg)
+Working version of site should look like this at standard screen size:
+![Site Screenshot](./assets/images/screenshot-ws.png)
+
+Working version of site should look like this with screen size smaller than 750px:
+![Site Screenshot](./assets/images/screenshot-750px.png)
 
 ## License
 

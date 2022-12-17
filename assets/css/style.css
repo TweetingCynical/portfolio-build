@@ -4,6 +4,8 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* Store colours and fonts for use sitewide */
@@ -19,12 +21,10 @@
 html {
     /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
     font-size: 62.5%;
-    width: 100vw;
 }
 
 /* Set overall body values */
 body {
-    width: 100vw;
     background-color: var(--white);
     color: var(--mainColor);
     font-family: var(--coreFont), var(--titleFont), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -39,8 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin-bottom: 0.625rem;
-    color: var(--heliotrope);
+    color: var(--white);
     font-weight: 700;
     line-height: 1.1;
 }
@@ -76,6 +75,7 @@ a {
 .header {
     display: flex;
     flex-direction: row;
+    align-items: center;
     height: 100px;
     background: var(--mainColor);
     color: var(--white);
@@ -84,6 +84,7 @@ a {
 
 .pageTitle {
     width: 35%;
+    height: 100%;
     display: flex;
     align-items: center;
 }
@@ -92,7 +93,7 @@ a {
     width: 100%;
     padding: 20px;
     background: var(--secondaryColor);
-    height: 70%;
+    max-height: 70%;
     display: flex;
     align-items: center;
 }
@@ -108,33 +109,25 @@ a {
 .navBar a {
     color: var(--white);
     font-size: larger;
-    padding: 20px;
+    padding: 10px;
 }
 
-.logo {
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    margin: 0 5px;
+#logoImg {
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    margin: 5px; 
+    max-height: 100px;
 }
 
-.logo img:hover{
+#logoImg:hover {
     outline: 6px solid var(--secondaryColor);
     outline-offset: -5px;
     transition: all 0.5s ease-in-out;
 }
 
-header .logo img {
-    height: 90px;
-    width: 90px;
-    border-radius: 50%;
-    border: 5px solid var(--white);
-    margin: 5px;
-}
-
 /* Hero leader image */
 .hero {
-    width: 100%;
+    width: 100vw;
     height: 200px;
     background: linear-gradient( /* Create top layer of semi transparent gradient */
         rgba(79, 62, 89, 0.45), 
@@ -155,7 +148,7 @@ header .logo img {
     align-items: center;
     justify-content: flex-end;
     position: relative;
-    width: 500px;
+    /* width: 500px; */
     height: 60px;
     padding: 20px;
     background-color: var(--secondaryColor);
@@ -231,12 +224,17 @@ header .logo img {
 
 /* Styling for sections of the grid */
 #workDisplayA, #workDisplayB, #workDisplayC, #workDisplayD {
-    margin: 5px;
-    background-color: brown;
-    border: 5px solid var(--mainColor);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.gridWorkDisplay {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    margin: 5px;
+    border: 5px solid var(--mainColor);
 }
 
 #titleAbout, #titleWork, #titleContact {
@@ -247,15 +245,15 @@ header .logo img {
     border-right: 5px solid var(--mainColor);
 }
 
+#titleAbout h3, #titleWork h3, #titleContact h3 {
+    color: var(--mainColor);
+}
+
 #displayAbout, #displayContact {
     border: 5px solid white;
 }
 
-.gridWorkDisplay {
-    display: flex;
-    align-items: flex-end;
-    padding: 0 0 20px 0;
-}
+
 
 .gridWorkDisplay:hover {
     box-shadow: inset 0px 0px 20px var(--secondaryColor), 0 0 20px var(--secondaryColor);
@@ -309,4 +307,53 @@ header .logo img {
     font-size: larger;
     display:flex;
     flex-direction: column;
+}
+
+@media only screen and (max-width: 750px) {
+    .pageTitle {
+        display: none;
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+
+    .navBar {
+        width: initial;
+    }
+
+    .logo {
+        padding-right: 50px;
+    }
+
+    .gridArea {
+        display: initial;
+    }
+    
+    #titleAbout, #titleWork, #titleContact {
+        justify-content: flex-start;
+        border-right: initial;
+        border-bottom: 2px solid var(--mainColor);
+    }
+
+    .workHeadline {
+        font-size: 20px;
+    }
+
+    .gridWorkDisplay {
+        height: 300px;
+    }
+
+    .contactBar {
+        align-items: flex-end;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .heroHeadline{
+        font-size: 18px;
+    }
+    .gridWorkDisplay {
+        height: 200px;
+    }
 }
