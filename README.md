@@ -30,6 +30,7 @@ This page has been built to showcase some of the following skills in use in the 
 - Styling of different classes within the grid to allow for easier addition of future grid rows;
 - Overlaying of headlines onto images;
 - Hover options to ann outline border and remove linear gradients to draw focus to images;
+- Contact icons with links to different socials;
 
 
 ## Suggested future changes

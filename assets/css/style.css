@@ -19,11 +19,12 @@
 html {
     /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
     font-size: 62.5%;
+    width: 100vw;
 }
 
 /* Set overall body values */
 body {
-    margin: 0 5%;
+    width: 100vw;
     background-color: var(--white);
     color: var(--mainColor);
     font-family: var(--coreFont), var(--titleFont), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -31,6 +32,7 @@ body {
     line-height: 1.5;
 }
 
+/* Set consistent font weights */
 h1,
 h2,
 h3,
@@ -47,27 +49,21 @@ h1 {
     /* 4rem = 40px (4 * 10px) */
     font-size: 4rem;
 }
-
 h2 {
     font-size: 3.5rem;
 }
-
 h3 {
     font-size: 3rem;
 }
-
 h4 {
     font-size: 2.5rem;
 }
-
 h5 {
     font-size: 2rem;
 }
-
 h6 {
     font-size: 1.5rem;
 }
-
 p {
     margin-bottom: 1rem;
 }
@@ -87,38 +83,38 @@ a {
 }
 
 .pageTitle {
-    width: 60%;
+    width: 35%;
     display: flex;
     align-items: center;
 }
 
 .pageTitle h1 {
-    width: 60%;
+    width: 100%;
     padding: 20px;
     background: var(--secondaryColor);
     height: 70%;
     display: flex;
-    width: 60%;
     align-items: center;
 }
 
 .navBar {
-    width: 30%;
+    width: 55%;
     align-self: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 .navBar a {
     color: var(--white);
     font-size: larger;
+    padding: 20px;
 }
 
 .logo {
     width: 10%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin: 0 5px;
 }
 
@@ -169,8 +165,7 @@ header .logo img {
 /* Grid layout of 5 x 4 */
 .gridArea {
     display: grid;
-    height: 100vh;
-    grid-template: 1fr 2fr 2fr 2fr 2fr / 1fr 1fr 1fr 1fr;
+    grid-template: 1fr 2fr 2fr 2fr 1fr / 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "titleAbout displayAbout displayAbout displayAbout"
     "titleWork workDisplayA workDisplayA workDisplayB"
@@ -304,17 +299,14 @@ header .logo img {
 
 .contactBar {
     width: 100%;
-    align-self: center;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .contactBar a {
     color: var(--secondaryColor);
     font-size: larger;
-    text-decoration: none;
     display:flex;
     flex-direction: column;
 }
