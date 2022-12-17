@@ -170,7 +170,7 @@ header .logo img {
 .gridArea {
     display: grid;
     height: 100vh;
-    grid-template: 1fr 2fr 2fr 2fr 1fr / 1fr 1fr 1fr 1fr;
+    grid-template: 1fr 2fr 2fr 2fr 2fr / 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "titleAbout displayAbout displayAbout displayAbout"
     "titleWork workDisplayA workDisplayA workDisplayB"
@@ -296,4 +296,25 @@ header .logo img {
     background-size: cover;
     background-position: center;
     cursor: pointer;
+}
+
+.gridContentDisplay {
+    display: flex;
+}
+
+.contactBar {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contactBar a {
+    color: var(--secondaryColor);
+    font-size: larger;
+    text-decoration: none;
+    display:flex;
+    flex-direction: column;
 }
