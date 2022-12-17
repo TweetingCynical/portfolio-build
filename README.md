@@ -24,6 +24,7 @@ This page has been built to showcase some of the following skills in use in the 
 - Setting border radius to create a circular image;
 - Setting the cursor: pointer for a tags;
 - Flex box for nav bar layout inside header;
+- Transition effect to nav bar logo;
 - Linear gradients used on header and work display images using stored colours;
 - Grid layout to structure main content on page;
 - Styling of different classes within the grid to allow for easier addition of future grid rows;
@@ -35,6 +36,7 @@ This page has been built to showcase some of the following skills in use in the 
 
 - Add further portfolio elements to replace placeholders;
 - Create links to professional pages on LinkedIn, Figma etc.
+- Add unfolding options for items within grid so default is to show latest/best 4 items, but a button will reveal an expanded grid with others below.
 
 ## Screenshot
 
