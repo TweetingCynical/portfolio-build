@@ -138,7 +138,7 @@ a {
         rgba(79, 62, 89, 0.45), 
         var(--mainColor)
     ), 
-    url("../images/02-wireframe.jpg"); /* Add bottom layer of hero image */
+    url("../images/02-wireframe.png"); /* Add bottom layer of hero image */
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -190,7 +190,7 @@ a {
         rgba(79, 62, 89, 0.45), 
         var(--mainColor)
     ), 
-    url("../images/02-portfolio-5.jpg"); /* Add bottom layer of work display image */
+    url("../images/02-portfolio-5.png"); /* Add bottom layer of work display image */
 }
 #workDisplayB {
     grid-area: workDisplayB;
@@ -198,7 +198,7 @@ a {
         rgba(79, 62, 89, 0.45), 
         var(--mainColor)
     ), 
-    url("../images/02-portfolio-1.jpg"); /* Add bottom layer of work display image */
+    url("../images/02-portfolio-1.png"); /* Add bottom layer of work display image */
 }
 #workDisplayC {
     grid-area: workDisplayC;
@@ -206,7 +206,7 @@ a {
         rgba(79, 62, 89, 0.45), 
         var(--mainColor)
     ), 
-    url("../images/02-portfolio-6.jpg"); /* Add bottom layer of work display image */
+    url("../images/02-portfolio-6.png"); /* Add bottom layer of work display image */
 }
 #workDisplayD {
     grid-area: workDisplayD;
@@ -214,7 +214,7 @@ a {
         rgba(79, 62, 89, 0.45), 
         var(--mainColor)
     ), 
-    url("../images/02-portfolio-3.jpg"); /* Add bottom layer of work display image */
+    url("../images/02-portfolio-3.png"); /* Add bottom layer of work display image */
 }
 
 #titleContact {
@@ -274,19 +274,19 @@ a {
 /* Styling for when user hovers over a work display image.
     Effectively overrides previous setting of linear gradient to give the illusion that the image is lighting up*/
 #workDisplayA:hover {
-    background: url("../images/02-portfolio-5.jpg");
+    background: url("../images/02-portfolio-5.png");
 }
 
 #workDisplayB:hover {
-    background: url("../images/02-portfolio-1.jpg");
+    background: url("../images/02-portfolio-1.png");
 }
 
 #workDisplayC:hover {
-    background: url("../images/02-portfolio-6.jpg");
+    background: url("../images/02-portfolio-6.png");
 }
 
 #workDisplayD:hover {
-    background: url("../images/02-portfolio-3.jpg");
+    background: url("../images/02-portfolio-3.png");
 }
 
 #workDisplayA:hover, #workDisplayB:hover, #workDisplayC:hover, #workDisplayD:hover {
