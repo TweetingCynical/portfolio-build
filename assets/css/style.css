@@ -64,7 +64,7 @@ h6 {
     font-size: 1.5rem;
 }
 p {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     margin-bottom: 1rem;
 }
 a {
@@ -160,7 +160,7 @@ a {
 /* Main grid layout of 5 x 4 */
 .gridArea {
     display: grid;
-    grid-template: 1fr 2fr 2fr 2fr 1fr / 1fr 1fr 1fr 1fr;
+    grid-template: 2fr 2fr 2fr 2fr 1fr / 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "titleAbout displayAbout displayAbout displayAbout"
     "titleWork workDisplayA workDisplayA workDisplayB"
@@ -222,6 +222,13 @@ a {
     grid-area: displayContact;
 }
 
+/* For making sure the images inside work display are appropriately sized and centered */
+#workDisplayA, #workDisplayB, #workDisplayC, #workDisplayD {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 /* Styling for sections of the grid */
 .gridWorkDisplay {
     display: flex;
@@ -229,12 +236,6 @@ a {
     padding: 0 0 20px 0;
     margin: 5px;
     border: 5px solid var(--mainColor);
-}
-/* For making sure the images inside work display are appropriately sized and centered */
-#workDisplayA, #workDisplayB, #workDisplayC, #workDisplayD {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 #titleAbout, #titleWork, #titleContact {
@@ -293,10 +294,6 @@ a {
 }
 
 /* Styling for the contact buttons at the foot of the table */
-.gridContentDisplay {
-    display: flex;
-}
-
 .contactBar {
     width: 100%;
     display: flex;
@@ -346,6 +343,9 @@ a {
     .contactBar {
         align-items: flex-end;
     }
+    p{
+        font-size: 2rem;
+    }
 }
 
 @media only screen and (max-width: 550px) {
@@ -361,6 +361,9 @@ a {
     .contactBar img {
         height: 40px;
         width: 40px;
+    }
+    p{
+        font-size: 1.8rem;
     }
 }
 
@@ -393,6 +396,9 @@ a {
         height: 25px;
         width: 25px;
     }
+    p{
+        font-size: 1.6rem;
+    }
 }
 
 @media only screen and (max-width: 330px) {
@@ -408,5 +414,8 @@ a {
     .workHeadline {
         min-width: initial;
         width: 60%;
+    }
+    p{
+        font-size: 1.4rem;
     }
 }
