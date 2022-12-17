@@ -11,7 +11,6 @@
     --mainColor: #3C1934;
     --accentColor: #4F3E59;
     --secondaryColor: #AA3619;
-    --secAccColor: #E8EBDC;
     --white: white;
     --coreFont: Montserrat;
     --titleFont: Comfortaa;
@@ -278,22 +277,18 @@ header .logo img {
 /* Styling for when user hovers over a work display image */
 #workDisplayA:hover {
     background: url("../images/02-portfolio-5.jpg");
-
 }
 
 #workDisplayB:hover {
     background: url("../images/02-portfolio-1.jpg");
-
 }
 
 #workDisplayC:hover {
     background: url("../images/02-portfolio-6.jpg");
-
 }
 
 #workDisplayD:hover {
     background: url("../images/02-portfolio-3.jpg");
-
 }
 
 #workDisplayA:hover, #workDisplayB:hover, #workDisplayC:hover, #workDisplayD:hover {
