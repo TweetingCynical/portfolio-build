@@ -399,4 +399,8 @@ a {
     #logoImg {
         max-height: 70px;
     }
+    .workHeadline {
+        min-width: initial;
+        width: 60%;
+    }
 }
