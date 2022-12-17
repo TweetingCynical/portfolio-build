@@ -21,6 +21,8 @@
 html {
     /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
     font-size: 62.5%;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 /* Set overall body values */
@@ -30,6 +32,7 @@ body {
     font-family: var(--coreFont), var(--titleFont), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     font-size: 1.75rem;
     line-height: 1.5;
+
 }
 
 /* Set consistent font weights */
@@ -129,7 +132,7 @@ a {
 
 /* Hero leader image */
 .hero {
-    width: 100vw;
+    width: 100%;
     height: 200px;
     background: linear-gradient( /* Create top layer of semi transparent gradient */
         rgba(79, 62, 89, 0.45), 
