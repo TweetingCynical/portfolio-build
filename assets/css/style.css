@@ -71,7 +71,7 @@ a {
     cursor: pointer;
 }
 
-/* Header bar with logo, title and nav options */
+/* Header bar with title, nav and logo options */
 .header {
     display: flex;
     flex-direction: row;
@@ -119,6 +119,7 @@ a {
     max-height: 100px;
 }
 
+/* Add an image outline with transition effect when user hovers over logo */
 #logoImg:hover {
     outline: 6px solid var(--secondaryColor);
     outline-offset: -5px;
@@ -142,7 +143,7 @@ a {
     padding: 20px;
 }
 
-/* Overlaid headline on image */
+/* Overlaid headline on hero image */
 .heroHeadline {
     display: flex;
     align-items: center;
@@ -155,7 +156,7 @@ a {
     color: var(--white);
 }
 
-/* Grid layout of 5 x 4 */
+/* Main grid layout of 5 x 4 */
 .gridArea {
     display: grid;
     grid-template: 1fr 2fr 2fr 2fr 1fr / 1fr 1fr 1fr 1fr;
@@ -171,31 +172,29 @@ a {
 #titleAbout {
     grid-area: titleAbout;
 }
-
 #displayAbout {
     grid-area: displayAbout;
 }
-
 #titleWork {
     grid-area: titleWork;
 }
 
+/* Set background images with linear gradients */
 #workDisplayA {
     grid-area: workDisplayA;
     background: linear-gradient( /* Create top layer of semi transparent gradient */
         rgba(79, 62, 89, 0.45), 
         var(--mainColor)
     ), 
-    url("../images/02-portfolio-5.jpg"); /* Add bottom layer of hero image */
+    url("../images/02-portfolio-5.jpg"); /* Add bottom layer of work display image */
 }
-
 #workDisplayB {
     grid-area: workDisplayB;
     background: linear-gradient( /* Create top layer of semi transparent gradient */
         rgba(79, 62, 89, 0.45), 
         var(--mainColor)
     ), 
-    url("../images/02-portfolio-1.jpg"); /* Add bottom layer of hero image */
+    url("../images/02-portfolio-1.jpg"); /* Add bottom layer of work display image */
 }
 #workDisplayC {
     grid-area: workDisplayC;
@@ -203,7 +202,7 @@ a {
         rgba(79, 62, 89, 0.45), 
         var(--mainColor)
     ), 
-    url("../images/02-portfolio-6.jpg"); /* Add bottom layer of hero image */
+    url("../images/02-portfolio-6.jpg"); /* Add bottom layer of work display image */
 }
 #workDisplayD {
     grid-area: workDisplayD;
@@ -211,7 +210,7 @@ a {
         rgba(79, 62, 89, 0.45), 
         var(--mainColor)
     ), 
-    url("../images/02-portfolio-3.jpg"); /* Add bottom layer of hero image */
+    url("../images/02-portfolio-3.jpg"); /* Add bottom layer of work display image */
 }
 
 #titleContact {
@@ -223,18 +222,18 @@ a {
 }
 
 /* Styling for sections of the grid */
-#workDisplayA, #workDisplayB, #workDisplayC, #workDisplayD {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
 .gridWorkDisplay {
     display: flex;
     align-items: flex-end;
     padding: 0 0 20px 0;
     margin: 5px;
     border: 5px solid var(--mainColor);
+}
+/* For making sure the images inside work display are appropriately sized and centered */
+#workDisplayA, #workDisplayB, #workDisplayC, #workDisplayD {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #titleAbout, #titleWork, #titleContact {
@@ -253,10 +252,10 @@ a {
     border: 5px solid white;
 }
 
-
-
 .gridWorkDisplay:hover {
-    box-shadow: inset 0px 0px 20px var(--secondaryColor), 0 0 20px var(--secondaryColor);
+    box-shadow: 
+        inset 0px 0px 20px var(--secondaryColor), 
+        0 0 20px var(--secondaryColor);
 }
 
 .workHeadline {
@@ -267,7 +266,8 @@ a {
     padding: 10px;
 }
 
-/* Styling for when user hovers over a work display image */
+/* Styling for when user hovers over a work display image.
+    Effectively overrides previous setting of linear gradient to give the illusion that the image is lighting up*/
 #workDisplayA:hover {
     background: url("../images/02-portfolio-5.jpg");
 }
@@ -291,10 +291,7 @@ a {
     cursor: pointer;
 }
 
-.gridContentDisplay {
-    display: flex;
-}
-
+/* Styling for the contact buttons at the foot of the table */
 .contactBar {
     width: 100%;
     display: flex;
@@ -307,25 +304,24 @@ a {
     font-size: larger;
     display:flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Media queries for adjusting items based on screen size */
 @media only screen and (max-width: 750px) {
     .pageTitle {
         display: none;
     }
-
     .header {
         justify-content: space-between;
     }
-
     .navBar {
         width: initial;
     }
-
     .logo {
         padding-right: 50px;
     }
-
     .gridArea {
         display: initial;
     }
@@ -335,15 +331,12 @@ a {
         border-right: initial;
         border-bottom: 2px solid var(--mainColor);
     }
-
     .workHeadline {
         font-size: 20px;
     }
-
     .gridWorkDisplay {
         height: 300px;
     }
-
     .contactBar {
         align-items: flex-end;
     }
@@ -355,5 +348,55 @@ a {
     }
     .gridWorkDisplay {
         height: 200px;
+    }
+    .contactBar a {
+        font-size: 18px;
+    }
+    .contactBar img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .navBar a {
+        font-size: 16px;
+    }
+    .heroHeadline{
+        font-size: 16px;
+    }
+    .gridWorkDisplay {
+        height: 200px;
+    }
+    .workHeadline {
+        min-width: initial;
+        width: 40%;
+    }
+    .workHeadline h3 {
+        font-size: 16px;
+    }
+    .workHeadline p {
+        font-size: 14px;
+    }
+    .contactBar a {
+        font-size: 16px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .contactBar img {
+        height: 25px;
+        width: 25px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .header {
+        height: 70px;
+    }
+    .navBar a {
+        font-size: 14px;
+    }
+    #logoImg {
+        max-height: 70px;
     }
 }
