@@ -1,45 +1,68 @@
 <!DOCTYPE html>
-<html lang="en-gb">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lernantino // Web Developer</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
 </head>
-
 <body>
-  <!-- main logo / nav -->
-  <header>
-    <h1>Lernantino</h1>
-    <nav>
-    </nav>
-  </header>
 
-  <!-- hero banner -->
-  <section class="hero-banner">
-    <div>
-      <h2>Cool subtitle here!</h2>
+<!-- Header bar with logo, title and nav buttons -->
+<header class="header">
+    <div class="logo">
+        <img src="/assets/images/headshot.png" id="logoImg">
     </div>
-  </section>
+    <h1 class="pageTitle">Test Site</h1>
+    <nav class="navBar">
+        <a href="#titleAbout">About</a>
+        <a href="#titleWork">Work</a>
+        <a href="#titleContact">Contact</a>
+    </nav>
+</header>
+    
+<main>
 
-  <main class="page-wrapper">
-    <!-- about me -->
-    <section class="page-section" id="about">
-      <h2>About Me</h2>
-    </section>
+<!-- Leader image -->
+<div>
+    <img src="./assets/images/02-wireframe.jpg" class="hero">
+</div>
+<br>
 
-    <!-- portfolio container -->
-    <section class="page-section" id="work">
-      <h2>Work</h2>
-    </section>
+<!-- Main 5 row by 4 column grid for containing main contents of page -->
+<container class="gridArea">
+    <div class="gridChildTitle" id="titleAbout">
+        <p>About</p>
+        </div>
+    <div class="gridChildDisplay" id="displayAbout">
+    <p>About me text</p>
+    </div>
+    <div class="gridChildTitle" id="titleWork">
+        <p>Work</p>
+        </div>
+    <div class="gridChildDisplay" id="workDisplayA">
+    <p>Application A</p>
+    </div>
+    <div class="gridChildDisplay" id="workDisplayB">
+    <p>Application B</p>
+    </div>
+    <div class="gridChildDisplay" id="workDisplayC">
+    <p>Application C</p>
+    </div>
+    <div class="gridChildDisplay" id="workDisplayD">
+    <p>Application D</p>
+    </div>
+    <div class="gridChildTitle" id="titleContact">
+    <p>Contact</p>
+    </div>
+    <div class="gridChildDisplay" id="displayContact">
+    <p>Contact Details</p>
+    </div>
 
-    <!-- contact -->
-    <section class="page-section contact" id="contact">
-      <h2>Contact Me</h2>
-    </section>
-  </main>
+</container>
+
+</main>
 </body>
-
 </html>
