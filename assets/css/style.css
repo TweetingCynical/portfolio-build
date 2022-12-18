@@ -116,6 +116,11 @@ a {
     padding: 10px;
 }
 
+.navBar a:hover {
+    background: var(--secondaryColor);
+    transition: all 0.5s ease-in-out;
+}
+
 #logoImg {
     border-radius: 50%;
     border: 5px solid var(--white);
