@@ -143,7 +143,7 @@ a {
         var(--mainColor)
     ), 
     url("../images/02-wireframe.png"); /* Add bottom layer of hero image */
-    object-fit: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: flex-end;
