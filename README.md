@@ -8,10 +8,12 @@
 
 ### Scope and Purpose
 
-Build a professional portfolion page for showcasing work on web development projects.
+Build a professional portfolio page for showcasing work on web development projects.
 
 ### Wireframe
 
+The initial layout design created for the work display grid was envisioned using good old technology, favoured by live, in-person teamworking. Here is one one of the iterations that eventually led to the design you see on the live site today:
+![Grid wireframing](./assets/images/wireframing-grid-outline.png)
 
 
 ### Overview of Build
